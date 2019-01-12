@@ -1,6 +1,5 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { AuthGuard } from './auth-guard.service';
 import {
   NbAuthComponent,
   NbLoginComponent,
@@ -8,15 +7,10 @@ import {
   NbRegisterComponent,
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
-  NbAuthModule,
-  NbPasswordAuthStrategy,
-  NbAuthJWTToken
 } from '@nebular/auth';
 
 const routes: Routes = [
-  { path: 'pages',
-    canActivate: [AuthGuard],
-    loadChildren: 'app/pages/pages.module#PagesModule' },
+  { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
   {
     path: 'auth',
     component: NbAuthComponent,
@@ -56,30 +50,7 @@ const config: ExtraOptions = {
 };
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, config),
-    NbAuthModule.forRoot({
-      strategies: [
-        NbPasswordAuthStrategy.setup({
-          name: 'email',
-           baseEndpoint: '162.243.171.76:1337',
-           login: {
-             endpoint: '/auth/local',
-             method: 'post',
-           },
-           register: {
-             endpoint: '/auth/register',
-           },
-           token: {
-              class: NbAuthJWTToken,
-              key: 'token',
-            }
-        }),
-      ],
-      forms: {
-      },
-    }), 
-  ],
+  imports: [RouterModule.forRoot(routes, config)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
