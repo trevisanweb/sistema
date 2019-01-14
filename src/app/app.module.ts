@@ -39,41 +39,19 @@ import { AuthGuard } from './auth-guard.service';
     NbAuthModule.forRoot({
       strategies: [
         NbPasswordAuthStrategy.setup({
-          name: 'identifier',
+          name: 'email',
             baseEndpoint: 'http://api.clubemapa.com.br:1337',
             login: {
               endpoint: '/auth/local',
               method: 'post',
             },
+            register: {
+              endpoint: '/auth/local/register',
+            },
             token: {
               class: NbAuthJWTToken,
               key: 'jwt',
             },
-        }),
-        NbPasswordAuthStrategy.setup({
-          name: 'email',
-           baseEndpoint: 'http://api.clubemapa.com.br:1337',
-           register: {
-             endpoint: '/auth/local/register',
-           },
-           token: {
-              class: NbAuthJWTToken,
-              key: 'jwt',
-            },
-        }),
-        NbOAuth2AuthStrategy.setup({
-          name: 'google',
-          clientId: '806751403568-03376bvlin9n3rhid0cahus6ei3lc69q.apps.googleusercontent.com',
-          clientSecret: '',
-          authorize: {
-            endpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
-            responseType: NbOAuth2ResponseType.TOKEN,
-            scope: 'https://www.googleapis.com/auth/userinfo.profile',
-            redirectUri: '/auth/google/callback',
-          },
-          redirect: {
-            success: '/example/oauth2',
-          },
         }),
       ],
       forms: {
