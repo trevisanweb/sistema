@@ -40,15 +40,15 @@ import { AuthGuard } from './auth-guard.service';
       strategies: [
         NbPasswordAuthStrategy.setup({
           name: 'identifier',
-           baseEndpoint: 'http://api.clubemapa.com.br:1337',
-           login: {
-             endpoint: '/auth/local',
-             method: 'post',
-           },
-           token: {
+            baseEndpoint: 'http://api.clubemapa.com.br:1337',
+            login: {
+              endpoint: '/auth/local',
+              method: 'post',
+            },
+            token: {
               class: NbAuthJWTToken,
               key: 'jwt',
-            }
+            },
         }),
         NbPasswordAuthStrategy.setup({
           name: 'email',
@@ -59,7 +59,7 @@ import { AuthGuard } from './auth-guard.service';
            token: {
               class: NbAuthJWTToken,
               key: 'jwt',
-            }
+            },
         }),
         NbOAuth2AuthStrategy.setup({
           name: 'google',
@@ -71,7 +71,6 @@ import { AuthGuard } from './auth-guard.service';
             scope: 'https://www.googleapis.com/auth/userinfo.profile',
             redirectUri: '/auth/google/callback',
           },
-    
           redirect: {
             success: '/example/oauth2',
           },
@@ -88,7 +87,7 @@ import { AuthGuard } from './auth-guard.service';
   bootstrap: [AppComponent],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
-    AuthGuard
+    AuthGuard,
   ],
 })
 export class AppModule {
