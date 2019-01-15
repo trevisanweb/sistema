@@ -2183,9 +2183,9 @@ var __metadata$8 = (this && this.__metadata) || function (k, v) {
  * Copyright Akveo. All Rights Reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
-var NgxAuthComponent = /** @class */ (function () {
+var NbAuthComponent = /** @class */ (function () {
     // showcase of how to use the onAuthenticationChange method
-    function NgxAuthComponent(auth, location) {
+    function NbAuthComponent(auth, location) {
         var _this = this;
         this.auth = auth;
         this.location = location;
@@ -2198,22 +2198,22 @@ var NgxAuthComponent = /** @class */ (function () {
             _this.authenticated = authenticated;
         });
     }
-    NgxAuthComponent.prototype.back = function () {
+    NbAuthComponent.prototype.back = function () {
         this.location.back();
         return false;
     };
-    NgxAuthComponent.prototype.ngOnDestroy = function () {
+    NbAuthComponent.prototype.ngOnDestroy = function () {
         this.alive = false;
     };
-    NgxAuthComponent = __decorate$10([
+    NbAuthComponent = __decorate$10([
         _angular_core.Component({
-            selector: 'nb-auth',
-            styles: ["/*! * @license * Copyright Akveo. All Rights Reserved. * Licensed under the MIT License. See License.txt in the project root for license information. */:host nb-card{margin:0;height:calc(100vh - 2 * 2.5rem)}:host .navigation .link{text-decoration:none}:host .navigation .link .icon{font-size:2rem}:host nb-card-body{display:flex;width:100%}:host nb-auth-block{margin:auto}@media (max-width: 767.98px){:host nb-card{border-radius:0;height:100vh}}:host /deep/ nb-layout .layout .layout-container .content .columns nb-layout-column{padding:2.5rem}@media (max-width: 767.98px){:host /deep/ nb-layout .layout .layout-container .content .columns nb-layout-column{padding:0}} "],
-            template: "\n    <nb-layout>\n      <nb-layout-column>\n        <nb-card>\n          <nb-card-header>\n            <nav class=\"navigation\">\n              <a href=\"#\" (click)=\"back()\" class=\"link\" aria-label=\"Back\"><i class=\"icon nb-arrow-thin-left\"></i></a>\n            </nav>\n          </nb-card-header>\n          <nb-card-body>\n            <nb-auth-block>\n              <router-outlet></router-outlet>\n            </nb-auth-block>\n          </nb-card-body>\n        </nb-card>\n      </nb-layout-column>\n    </nb-layout>\n  ",
+            selector: 'ngx-auth',
+            styles: ["/*! * @license * Copyright Akveo. All Rights Reserved. * Licensed under the MIT License. See License.txt in the project root for license information. */:host nb-card{margin:0;height:calc(100vh - 2 * 2.5rem)}:host .navigation .link{text-decoration:none}:host .navigation .link .icon{font-size:2rem}:host nb-card-body{display:flex;width:100%}:host ngx-auth-block{margin:auto}@media (max-width: 767.98px){:host nb-card{border-radius:0;height:100vh}}:host /deep/ nb-layout .layout .layout-container .content .columns nb-layout-column{padding:2.5rem}@media (max-width: 767.98px){:host /deep/ nb-layout .layout .layout-container .content .columns nb-layout-column{padding:0}} "],
+            template: "\n    <nb-layout>\n      <nb-layout-column>\n        <nb-card>\n          <nb-card-header>\n            <nav class=\"navigation\">\n              <a href=\"#\" (click)=\"back()\" class=\"link\" aria-label=\"Back\"><i class=\"icon nb-arrow-thin-left\"></i></a>\n            </nav>\n          </nb-card-header>\n          <nb-card-body>\n            <ngx-auth-block>\n              <router-outlet></router-outlet>\n            </ngx-auth-block>\n          </nb-card-body>\n        </nb-card>\n      </nb-layout-column>\n    </nb-layout>\n  ",
         }),
         __metadata$8("design:paramtypes", [NbAuthService, _angular_common.Location])
-    ], NgxAuthComponent);
-    return NgxAuthComponent;
+    ], NbAuthComponent);
+    return NbAuthComponent;
 }());
 
 /**
@@ -2232,7 +2232,7 @@ var NbAuthBlockComponent = /** @class */ (function () {
     }
     NbAuthBlockComponent = __decorate$11([
         _angular_core.Component({
-            selector: 'nb-auth-block',
+            selector: 'ngx-auth-block',
             styles: [":host{display:block;width:100%;max-width:35rem}:host /deep/ form{width:100%}:host /deep/ .label{display:block;margin-bottom:0.5rem}:host /deep/ .error-message{margin-top:0.5rem}:host /deep/ .alert{text-align:center}:host /deep/ .title{margin-top:0;margin-bottom:0.75rem;text-align:center}:host /deep/ .sub-title{margin-bottom:2rem;text-align:center}:host /deep/ .checkbox{display:flex;justify-content:space-between;margin-bottom:10px;font-weight:normal}:host /deep/ .form-control-group{margin-bottom:2rem}:host /deep/ .form-control-group.accept-group{display:flex;justify-content:space-between;margin:2rem 0}:host /deep/ .form-control-group.accept-group .forgot-password{line-height:2}:host /deep/ .links{text-align:center;margin-top:1.75rem}:host /deep/ .links .socials{margin-top:1.5rem}:host /deep/ .links .socials a{margin:0 1rem;text-decoration:none;font-size:1rem;vertical-align:middle}:host /deep/ .links .socials a.with-icon{font-size:2rem}:host /deep/ .another-action{margin-top:2rem;text-align:center}:host /deep/ .sign-in-or-up{margin-top:2rem;display:flex;justify-content:space-between}:host /deep/ nb-alert .alert-title,:host /deep/ nb-alert .alert-message{margin:0 0 0.5rem}:host /deep/ nb-alert .alert-message-list{list-style-type:none;padding:0;margin:0} "],
             template: "\n    <ng-content></ng-content>\n  ",
         })
@@ -2665,7 +2665,7 @@ var NbAuthModule = /** @class */ (function () {
                 _angular_forms.FormsModule,
             ],
             declarations: [
-                NgxAuthComponent,
+                NbAuthComponent,
                 NbAuthBlockComponent,
                 NbLoginComponent,
                 NbRegisterComponent,
@@ -2674,7 +2674,7 @@ var NbAuthModule = /** @class */ (function () {
                 NbLogoutComponent,
             ],
             exports: [
-                NgxAuthComponent,
+                NbAuthComponent,
                 NbAuthBlockComponent,
                 NbLoginComponent,
                 NbRegisterComponent,
@@ -2690,7 +2690,7 @@ var NbAuthModule = /** @class */ (function () {
 var routes = [
     {
         path: 'auth',
-        component: NgxAuthComponent,
+        component: NbAuthComponent,
         children: [
             {
                 path: '',
@@ -2739,7 +2739,7 @@ exports.nbOptionsFactory = nbOptionsFactory;
 exports.nbNoOpInterceptorFilter = nbNoOpInterceptorFilter;
 exports.NbAuthModule = NbAuthModule;
 exports.routes = routes;
-exports.NgxAuthComponent = NgxAuthComponent;
+exports.NbAuthComponent = NbAuthComponent;
 exports.NbAuthBlockComponent = NbAuthBlockComponent;
 exports.NbLoginComponent = NbLoginComponent;
 exports.NbLogoutComponent = NbLogoutComponent;

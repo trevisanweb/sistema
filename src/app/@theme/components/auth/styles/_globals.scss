@@ -6,6 +6,6 @@
 
 @import 'global/components';
 
-@mixin nb-auth-global() {
-  @include nb-auth-components();
+@mixin ngx-auth-global() {
+  @include ngx-auth-components();
 }

@@ -10,7 +10,7 @@ import { NbAuthService } from '../services/auth.service';
 import { takeWhile } from 'rxjs/operators';
 
 @Component({
-  selector: 'nb-auth',
+  selector: 'ngx-auth',
   styleUrls: ['./auth.component.scss'],
   template: `
     <nb-layout>
@@ -22,16 +22,16 @@ import { takeWhile } from 'rxjs/operators';
             </nav>
           </nb-card-header>
           <nb-card-body>
-            <nb-auth-block>
+            <ngx-auth-block>
               <router-outlet></router-outlet>
-            </nb-auth-block>
+            </ngx-auth-block>
           </nb-card-body>
         </nb-card>
       </nb-layout-column>
     </nb-layout>
   `,
 })
-export class NgxAuthComponent implements OnDestroy {
+export class NbAuthComponent implements OnDestroy {
 
   private alive = true;
 

@@ -4,5 +4,5 @@
 $nb-enabled-themes: (default);
 
 @include nb-install() {
-  @include nb-auth-global();
+  @include ngx-auth-global();
 };
