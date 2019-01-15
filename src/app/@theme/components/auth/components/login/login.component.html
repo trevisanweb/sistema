@@ -18,25 +18,25 @@
 <form (ngSubmit)="login()" #form="ngForm" aria-labelledby="title">
 
   <div class="form-control-group">
-    <label class="label" for="input-email">Email address:</label>
+    <label class="label" for="input-identifier">Email address:</label>
     <input nbInput
            fullWidth
-           [(ngModel)]="user.email"
-           #email="ngModel"
-           name="email"
-           id="input-email"
+           [(ngModel)]="user.identifier"
+           #identifier="ngModel"
+           name="identifier"
+           id="input-identifier"
            pattern=".+@.+\..+"
-           placeholder="Email address"
+           placeholder="Identifier address"
            autofocus
-           [status]="email.dirty ? (email.invalid  ? 'danger' : 'success') : ''"
-           [required]="getConfigValue('forms.validation.email.required')"
-           [attr.aria-invalid]="email.invalid && email.touched ? true : null">
-    <ng-container *ngIf="email.invalid && email.touched">
-      <p class="error-message" *ngIf="email.errors?.required">
-        Email is required!
+           [status]="identifier.dirty ? (identifier.invalid  ? 'danger' : 'success') : ''"
+           [required]="getConfigValue('forms.validation.identifier.required')"
+           [attr.aria-invalid]="identifier.invalid && identifier.touched ? true : null">
+    <ng-container *ngIf="identifier.invalid && identifier.touched">
+      <p class="error-message" *ngIf="identifier.errors?.required">
+        Identifier is required!
       </p>
-      <p class="error-message" *ngIf="email.errors?.pattern">
-        Email should be the real one!
+      <p class="error-message" *ngIf="identifier.errors?.pattern">
+        identifier should be the real one!
       </p>
     </ng-container>
   </div>
@@ -82,6 +82,15 @@
     Log In
   </button>
 </form>
+
+
+
+<section class="links" aria-label="Social sign in">
+  or enter with:
+  <div class="socials">
+    <button nbButton status="success" *ngIf="!token" (click)="loginGoogle()">Sign In with Google</button>
+  </div>
+</section>
 
 <section *ngIf="socialLinks && socialLinks.length > 0" class="links" aria-label="Social sign in">
   or enter with:
