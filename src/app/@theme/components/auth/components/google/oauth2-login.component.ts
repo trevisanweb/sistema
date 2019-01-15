@@ -11,7 +11,7 @@ import { NbAuthService } from '../../services/auth.service';
 import { takeWhile } from 'rxjs/operators';
 
 @Component({
-  selector: 'nb-playground-auth',
+  selector: 'ngx-playground-auth',
   template: `
     <nb-layout>
       <nb-layout-column>

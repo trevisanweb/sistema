@@ -14,7 +14,7 @@ import { NbAuthOAuth2Token } from '../../services/token/token';
 import { takeWhile } from 'rxjs/operators';
 
 @Component({
-  selector: 'nb-login',
+  selector: 'ngx-login',
   templateUrl: './login.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

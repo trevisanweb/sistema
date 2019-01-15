@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 import { takeWhile } from 'rxjs/operators';
 
 @Component({
-  selector: 'nb-playground-oauth2-callback',
+  selector: 'ngx-playground-oauth2-callback',
   template: `
     <nb-layout>
       <nb-layout-column>Authenticating...</nb-layout-column>
