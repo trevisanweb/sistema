@@ -2,7 +2,7 @@ import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AuthGuard } from './auth-guard.service';
 import {
-  NbAuthComponent,
+  NgxAuthComponent,
   NbLoginComponent,
   NbLogoutComponent,
   NbRegisterComponent,
@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    component: NbAuthComponent,
+    component: NgxAuthComponent,
     children: [
       {
         path: '',

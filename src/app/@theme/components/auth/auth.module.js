@@ -12,7 +12,7 @@ import { NbAlertModule, NbButtonModule, NbCardModule, NbCheckboxModule, NbInputM
 import { NB_AUTH_FALLBACK_TOKEN, NbAuthService, NbAuthSimpleToken, NbAuthTokenParceler, NbTokenLocalStorage, NbTokenService, NbTokenStorage, } from './services';
 import { NbDummyAuthStrategy, NbOAuth2AuthStrategy, NbPasswordAuthStrategy, } from './strategies';
 import { defaultAuthOptions, NB_AUTH_INTERCEPTOR_HEADER, NB_AUTH_OPTIONS, NB_AUTH_STRATEGIES, NB_AUTH_TOKEN_INTERCEPTOR_FILTER, NB_AUTH_TOKENS, NB_AUTH_USER_OPTIONS, } from './auth.options';
-import { NbAuthComponent } from './components/auth.component';
+import { NgxAuthComponent } from './components/auth.component';
 import { NbAuthBlockComponent } from './components/auth-block/auth-block.component';
 import { NbLoginComponent } from './components/login/login.component';
 import { NbRegisterComponent } from './components/register/register.component';
@@ -85,7 +85,7 @@ var NbAuthModule = /** @class */ (function () {
                 FormsModule,
             ],
             declarations: [
-                NbAuthComponent,
+                NgxAuthComponent,
                 NbAuthBlockComponent,
                 NbLoginComponent,
                 NbRegisterComponent,
@@ -94,7 +94,7 @@ var NbAuthModule = /** @class */ (function () {
                 NbLogoutComponent,
             ],
             exports: [
-                NbAuthComponent,
+                NgxAuthComponent,
                 NbAuthBlockComponent,
                 NbLoginComponent,
                 NbRegisterComponent,

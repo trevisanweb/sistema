@@ -48,7 +48,7 @@ import { AuthGuard } from './auth-guard.service';
            token: {
               class: NbAuthJWTToken,
               key: 'jwt',
-            }
+           },
         }),
         NbPasswordAuthStrategy.setup({
           name: 'email',
@@ -59,7 +59,7 @@ import { AuthGuard } from './auth-guard.service';
            token: {
               class: NbAuthJWTToken,
               key: 'jwt',
-            }
+           },
         }),
         NbOAuth2AuthStrategy.setup({
           name: 'google',
@@ -71,7 +71,6 @@ import { AuthGuard } from './auth-guard.service';
             scope: 'https://www.googleapis.com/auth/userinfo.profile',
             redirectUri: '/auth/google/callback',
           },
-    
           redirect: {
             success: '/example/oauth2',
           },

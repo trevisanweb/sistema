@@ -31,7 +31,7 @@ import { takeWhile } from 'rxjs/operators';
     </nb-layout>
   `,
 })
-export class NbAuthComponent implements OnDestroy {
+export class NgxAuthComponent implements OnDestroy {
 
   private alive = true;
 

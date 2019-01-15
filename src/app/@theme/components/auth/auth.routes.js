@@ -1,4 +1,4 @@
-import { NbAuthComponent } from './components/auth.component';
+import { NgxAuthComponent } from './components/auth.component';
 import { NbLoginComponent } from './components/login/login.component';
 import { NbRegisterComponent } from './components/register/register.component';
 import { NbLogoutComponent } from './components/logout/logout.component';
@@ -7,7 +7,7 @@ import { NbResetPasswordComponent } from './components/reset-password/reset-pass
 export var routes = [
     {
         path: 'auth',
-        component: NbAuthComponent,
+        component: NgxAuthComponent,
         children: [
             {
                 path: '',
