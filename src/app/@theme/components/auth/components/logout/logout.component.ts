@@ -28,7 +28,6 @@ export class NbLogoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger;
     this.logout(this.strategy);
 
     localStorage.removeItem('auth_app_token');
@@ -36,7 +35,6 @@ export class NbLogoutComponent implements OnInit {
   }
 
   logout(strategy: string): void {
-    debugger;
     this.service.logout(strategy).subscribe((result: NbAuthResult) => {
 
       const redirect = result.getRedirect();
@@ -46,7 +44,6 @@ export class NbLogoutComponent implements OnInit {
         }, this.redirectDelay);
       }
     });
-    
   }
 
   getConfigValue(key: string): any {
