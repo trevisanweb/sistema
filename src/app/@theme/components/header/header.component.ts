@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   user: any;
 
-  userMenu = [{ title: 'Profile' }, { title: 'Log out', link: '/auth/logout'  }];
+  userMenu = [{ title: 'Profile' }, { title: 'Log out' }];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
@@ -33,12 +33,6 @@ export class HeaderComponent implements OnInit {
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, 'menu-sidebar');
     this.layoutService.changeLayoutSize();
-
-    return false;
-  }
-
-  toggleSettings(): boolean {
-    this.sidebarService.toggle(false, 'settings-sidebar');
 
     return false;
   }

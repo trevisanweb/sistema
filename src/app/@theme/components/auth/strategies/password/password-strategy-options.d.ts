@@ -51,6 +51,10 @@ export declare class NbPasswordAuthStrategyOptions extends NbAuthStrategyOptions
             required?: boolean;
             regexp?: string | null;
         };
+        identifier?: {
+            required?: boolean;
+            regexp?: string | null;
+        };
         fullName?: {
             required?: boolean;
             minLength?: number | null;
