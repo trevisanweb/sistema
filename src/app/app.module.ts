@@ -39,22 +39,14 @@ import { AuthGuard } from './auth-guard.service';
     NbAuthModule.forRoot({
       strategies: [
         NbPasswordAuthStrategy.setup({
-          name: 'identifier',
+          name: 'email',
            baseEndpoint: 'http://api.clubemapa.com.br:1337',
            login: {
              endpoint: '/auth/local',
              method: 'post',
            },
-           token: {
-              class: NbAuthJWTToken,
-              key: 'jwt',
-           },
-        }),
-        NbPasswordAuthStrategy.setup({
-          name: 'email',
-           baseEndpoint: 'http://api.clubemapa.com.br:1337',
            register: {
-             endpoint: '/auth/local/register',
+            endpoint: '/auth/local/register',
            },
            token: {
               class: NbAuthJWTToken,

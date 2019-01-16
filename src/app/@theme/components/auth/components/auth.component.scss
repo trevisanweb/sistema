@@ -1,4 +1,4 @@
-@import '../../../../../../node_modules/@nebular/theme/styles/global/breakpoints';
+@import '../../theme/styles/global/breakpoints';
 
 :host {
   $auth-layout-padding: 2.5rem;
@@ -21,7 +21,7 @@
     width: 100%;
   }
 
-  ngx-auth-block {
+  nb-auth-block {
     margin: auto;
   }
 

@@ -10,4 +10,4 @@
  * @license
  * Copyright Akveo. All Rights Reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
- */.nb-theme-cosmic ngx-auth .navigation .link .icon{font-weight:600}.nb-theme-cosmic ngx-auth-block .text-link{color:#a1a1e5;font-weight:600}.nb-theme-cosmic ngx-auth-block .error-message{color:#ff386a}.nb-theme-cosmic ngx-auth-block .accept-group a{color:#00f9a6}.nb-theme-cosmic ngx-auth-block .socials a::before{color:#a1a1e5}.nb-theme-cosmic ngx-auth-block .socials a:hover::before{color:#fff}
+ */.nb-theme-cosmic nb-auth .navigation .link .icon{font-weight:600}.nb-theme-cosmic nb-auth-block .text-link{color:#a1a1e5;font-weight:600}.nb-theme-cosmic nb-auth-block .error-message{color:#ff386a}.nb-theme-cosmic nb-auth-block .accept-group a{color:#00f9a6}.nb-theme-cosmic nb-auth-block .socials a::before{color:#a1a1e5}.nb-theme-cosmic nb-auth-block .socials a:hover::before{color:#fff}

@@ -4,8 +4,8 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
-@mixin ngx-auth-theme() {
-  ngx-auth .navigation .link .icon {
+@mixin nb-auth-theme() {
+  nb-auth .navigation .link .icon {
     font-weight: nb-theme(font-weight-bold);
   }
 }

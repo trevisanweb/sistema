@@ -3,9 +3,5 @@
  * Copyright Akveo. All Rights Reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
-
-@import 'global/components';
-
-@mixin nb-auth-global() {
-  @include nb-auth-components();
+export declare class NbAuthBlockComponent {
 }
