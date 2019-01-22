@@ -8,15 +8,13 @@ import {
   NbRegisterComponent,
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
-  NbAuthModule,
-  NbPasswordAuthStrategy,
-  NbAuthJWTToken
-} from '@nebular/auth';
+} from './@theme/components/auth';
 
 const routes: Routes = [
   { path: 'pages',
     canActivate: [AuthGuard],
-    loadChildren: 'app/pages/pages.module#PagesModule' },
+    loadChildren: 'app/pages/pages.module#PagesModule',
+  },
   {
     path: 'auth',
     component: NbAuthComponent,
@@ -56,30 +54,7 @@ const config: ExtraOptions = {
 };
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, config),
-    NbAuthModule.forRoot({
-      strategies: [
-        NbPasswordAuthStrategy.setup({
-          name: 'email',
-           baseEndpoint: '162.243.171.76:1337',
-           login: {
-             endpoint: '/auth/local',
-             method: 'post',
-           },
-           register: {
-             endpoint: '/auth/register',
-           },
-           token: {
-              class: NbAuthJWTToken,
-              key: 'token',
-            }
-        }),
-      ],
-      forms: {
-      },
-    }), 
-  ],
+  imports: [RouterModule.forRoot(routes, config)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
